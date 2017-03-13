@@ -38,7 +38,7 @@ namespace JeSuisUnSuperHeros.Dialogs
         private async Task ResumeAfterHelpDialog(IDialogContext context, IAwaitable<IMessageActivity> result)
         {
             // on ne peut pas appeler directement MessageReceivedAsync à la place de ResumeAfterHelpDialog
-            // autrement le code tente de récupérer un nouveau message.
+            // autrement le code tente de récupérer un nouveau message. 
             // mais la pile de message est vide, celà provoque une exception
             // ResumeAfterHelpDialog permet de placer un Wait() afin de réclamer un nouveau message
 
