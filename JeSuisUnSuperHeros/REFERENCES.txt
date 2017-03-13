@@ -1,0 +1,2 @@
+﻿exemple de map:
+https://github.com/Microsoft/BotBuilder-Samples/tree/master/CSharp/demo-ContosoFlowers
