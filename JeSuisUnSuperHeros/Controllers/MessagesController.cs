@@ -28,8 +28,7 @@ namespace JeSuisUnSuperHeros
 
             if (activity.Type == ActivityTypes.Message)
             {
-                //await Conversation.SendAsync(activity, () => new RootDialog());
-           await Conversation.SendAsync(activity, () => new LuisHerosDialog());
+                await Conversation.SendAsync(activity, () => new LuisHerosDialog());
             }
             else if (activity.Type == ActivityTypes.ConversationUpdate)
             {
@@ -48,7 +47,7 @@ namespace JeSuisUnSuperHeros
                     string url = HttpContext.Current.Request.Url + "/../../images/133.jpg";
                     string message = $"![Une image]({url})\n\n";
                     message += "Bienvenue dans le bot qui fera de vous un **Super Héros qui déchire**\n\n\n";
-                    message += "Faites **help** si vous avez besoin d'aide\n\n";
+                    //message += "Faites **help** si vous avez besoin d'aide\n\n";
 
                     Activity reply = activity.CreateReply(message);
                     await connector.Conversations.ReplyToActivityAsync(reply);
