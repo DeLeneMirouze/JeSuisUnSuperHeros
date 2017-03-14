@@ -1,4 +1,5 @@
 ﻿#region using
+using JeSuisUnSuperHeros.Models;
 using Microsoft.Bot.Builder.Dialogs;
 using Microsoft.Bot.Builder.Luis;
 using Microsoft.Bot.Builder.Luis.Models;
@@ -10,9 +11,11 @@ using System.Threading.Tasks;
 
 namespace JeSuisUnSuperHeros.Dialogs
 {
+    /// <summary>
+    /// Dialog qui prend en charge les interactions avec LUIS
+    /// </summary>
     [Serializable]
     [LuisModel("175a0273-5051-4296-b8a8-cc2a9fc41b73", "32910e551add4572bc25f23317fb53c0")]
-    //[LuisModel("3c34bc60-bc0f-40f0-8bf7-3cbe5f5a817b", "32910e551add4572bc25f23317fb53c0")]
     public class LuisHerosDialog: LuisDialog<Object>
     {
         #region NoneAsync
@@ -63,9 +66,36 @@ namespace JeSuisUnSuperHeros.Dialogs
 
         #region Mission
         [LuisIntent("Mission")]
-        //[LuisIntent("Reservation")]
         public async Task MissionAsync(IDialogContext context, LuisResult result)
         {
+            string ville = null;
+            string time = null;
+
+            foreach (EntityRecommendation item in result.Entities)
+            {
+                if (item.Type =="builtin.datetime.time")
+                {
+                    time = item.Entity;
+                }
+                if (item.Type == "builtin.geography.city" || item.Type== "geographie")
+                {
+                    ville = item.Entity;
+                }
+            }
+
+            if (ville == null || time == null)
+            {
+                await context.PostAsync("Il me faut une ville et une heure");
+            }
+            else
+            {
+                string message = string.Format($"Je vous ai trouvé une mission sur {ville} vers {time}");
+                await context.PostAsync(message);
+
+                string mission = Generator.GetMission();
+                await context.PostAsync(mission);
+            }
+
             context.Done(this);
         }
         #endregion

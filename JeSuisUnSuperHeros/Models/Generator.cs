@@ -9,6 +9,7 @@ namespace JeSuisUnSuperHeros.Models
         private static Dictionary<string, string> _firstDictionary = new Dictionary<string, string>();
         private static Dictionary<string, string> _lastDictionary = new Dictionary<string, string>();
         private static Dictionary<int, string> _missionsDictionary = new Dictionary<int, string>();
+        static Random rnd = new Random();
 
         static Generator()
         {
@@ -112,11 +113,10 @@ namespace JeSuisUnSuperHeros.Models
         #region GetMission
         public static string GetMission()
         {
-            Random rnd = new Random();
             int index = rnd.Next(0, 16);
 
-            string mission = _missionsDictionary[0];
-            mission = mission.Replace(".", Environment.NewLine);
+            string mission = _missionsDictionary[index];
+            mission = mission.Replace(".", "\n\n");
 
             return mission;
         } 

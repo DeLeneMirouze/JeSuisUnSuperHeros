@@ -121,7 +121,6 @@
     <Content Include="Images\133.jpg" />
     <Content Include="Images\img_1.png" />
     <Content Include="Images\img_2.png" />
-    <Content Include="REFERENCES.txt" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
     </Content>
