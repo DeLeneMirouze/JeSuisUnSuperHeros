@@ -51,6 +51,7 @@ namespace JeSuisUnSuperHeros.Dialogs
             // TODO sauvegarder
 
             await context.PostAsync("Prêt pour voler de mission en mission?");
+            await context.PostAsync("Faites une demande avec un lieu et une heure (en anglais)");
             context.Done(this);
         }
         #endregion

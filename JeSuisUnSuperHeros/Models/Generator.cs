@@ -46,7 +46,7 @@ namespace JeSuisUnSuperHeros.Models
             _lastDictionary.Add("a", "Mygale");
             _lastDictionary.Add("b", "Léon (nettoyeur)");
             _lastDictionary.Add("c", "Man");
-            _lastDictionary.Add("d", "Desosseur");
+            _lastDictionary.Add("d", "Le Desosseur");
             _lastDictionary.Add("e", "Hulk");
             _lastDictionary.Add("f", "Magic");
             _lastDictionary.Add("g", "Shark");
