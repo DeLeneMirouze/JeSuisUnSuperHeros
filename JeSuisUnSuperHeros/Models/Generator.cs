@@ -46,7 +46,7 @@ namespace JeSuisUnSuperHeros.Models
             _lastDictionary.Add("a", "Mygale");
             _lastDictionary.Add("b", "Léon (nettoyeur)");
             _lastDictionary.Add("c", "Man");
-            _lastDictionary.Add("d", "Le Desosseur");
+            _lastDictionary.Add("r", "Le Desosseur");
             _lastDictionary.Add("e", "Hulk");
             _lastDictionary.Add("f", "Magic");
             _lastDictionary.Add("g", "Shark");
@@ -60,7 +60,7 @@ namespace JeSuisUnSuperHeros.Models
             _lastDictionary.Add("o", "Widows");
             _lastDictionary.Add("p", "Boy");
             _lastDictionary.Add("q", "Quantic Cocktail");
-            _lastDictionary.Add("r", "Di Gorgonzolla");
+            _lastDictionary.Add("d", "Di Gorgonzolla");
             _lastDictionary.Add("s", "Norris");
             _lastDictionary.Add("t", "French TV");
             _lastDictionary.Add("u", "The Killer");
