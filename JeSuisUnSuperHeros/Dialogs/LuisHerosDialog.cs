@@ -24,15 +24,7 @@ namespace JeSuisUnSuperHeros.Dialogs
         {
             var message = luisResult.ToString();
 
-            if (message.ToLower().Contains("help"))
-            {
-                // l'utilisateur appelle à l'aide
-                await context.Forward(new HelpDialog(), ResumeAfterHelpDialog, message, CancellationToken.None);
-            }
-            else
-            {
-                await context.PostAsync("Désolé, je ne comprends pas ce que vous voulez");
-            }
+            await context.PostAsync("Désolé, je ne comprends pas ce que vous voulez");
 
             context.Done(this);
         }
