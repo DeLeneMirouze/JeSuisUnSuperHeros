@@ -60,13 +60,13 @@ namespace JeSuisUnSuperHeros.Models
             _lastDictionary.Add("o", "Widows");
             _lastDictionary.Add("p", "Boy");
             _lastDictionary.Add("q", "Quantic Cocktail");
-            _lastDictionary.Add("d", "Di Gorgonzolla");
+            _lastDictionary.Add("x", "Di Gorgonzolla");
             _lastDictionary.Add("s", "Norris");
             _lastDictionary.Add("t", "French TV");
             _lastDictionary.Add("u", "The Killer");
             _lastDictionary.Add("v", "Terminator");
             _lastDictionary.Add("w", "Women");
-            _lastDictionary.Add("x", "The Destructor");
+            _lastDictionary.Add("d", "The Destructor");
             _lastDictionary.Add("y", "Slider");
             _lastDictionary.Add("z", "X");
             #endregion
